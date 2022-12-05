@@ -76,7 +76,9 @@ function App() {
           <div className="user_by_id">
             <h2>Get User By Id</h2>
             <form onSubmit={(e) => onSubmit(e)}>
-              <input placeholder="type the id of user" type="number" name='id' value={id} onChange={(e) => onChange(e)}></input>
+              <p>Please enter Id between 1 to 10</p>
+              <input placeholder="Enter Id" type="number" name='id' value={id} onChange={(e) => onChange(e)}></input>
+              &nbsp;
               <button type="submit">Get User</button>
             </form>
             {User()}
