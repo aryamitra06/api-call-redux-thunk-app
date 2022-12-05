@@ -2,14 +2,14 @@ import {
     GET_USERS_REQUEST,
     GET_USERS_SUCCESS,
     GET_USERS_FAIL,
-} from "../constants/userConstants";
+} from "../constants/types";
 
 const initialState = {
     users: [],
-    loading: true,
+    loading: false,
     error: false
 }
-export const userReducer = (state = initialState, action) => {
+export const usersReducer = (state = initialState, action) => {
     switch (action.type) {
       case GET_USERS_REQUEST:
         return { users: [], loading: true, error: false };

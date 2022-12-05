@@ -28,6 +28,11 @@
   color: #61dafb;
 }
 
+.all_users, .user_by_id{
+  border: 5px solid black;
+  margin: 10px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

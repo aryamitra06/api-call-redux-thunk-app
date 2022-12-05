@@ -3,9 +3,9 @@ import {
   GET_USERS_REQUEST,
   GET_USERS_SUCCESS,
   GET_USERS_FAIL,
-} from "../constants/userConstants";
+} from "../constants/types";
 
-export const userAction = () => async (dispatch) => {
+export const usersAction = () => async (dispatch) => {
   try {
     dispatch({ type: GET_USERS_REQUEST });
     const { data } = await axios.get(
@@ -13,7 +13,6 @@ export const userAction = () => async (dispatch) => {
     );
     dispatch({ type: GET_USERS_SUCCESS, payload: data });
   } catch (error) {
-    console.log(error);
     dispatch({ type: GET_USERS_FAIL });
   }
 };
